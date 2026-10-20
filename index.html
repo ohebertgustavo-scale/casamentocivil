@@ -348,7 +348,7 @@ $("rsvp").addEventListener("submit", e => {
   e.preventDefault();
   const name = $("guest").value.trim(); if(!name) return;
   const q = $("qty").selectedOptions[0].textContent.toLowerCase();
-  const msg = `Oi, Aline e Hebert! Aqui é ${name}. Confirmo presença no casamento civil de vocês dia 30/10, às 10h10, no cartório (${q}).`;
+  const msg = `Oi, Aline e Hebert! Aqui é ${name}. Confirmo presença no casamento civil de vocês dia 31/10, às 10h10, no cartório (${q}).`;
   const url = "https://wa.me/" + (CONFIG.whatsapp || "") + "?text=" + encodeURIComponent(msg);
   const a = document.createElement("a"); a.href=url; a.target="_blank"; a.rel="noopener"; document.body.append(a); a.click(); a.remove();
   $("rsvp-msg").textContent = "Se o WhatsApp não abriu, envie esta mensagem para (19) 99602-3500: " + msg;
